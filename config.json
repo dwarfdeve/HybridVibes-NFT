@@ -1,17 +1,28 @@
 {
-  "price": 1.5,
-  "number": 1000,
+  "price": 2,
+  "number": 10000,
   "symbol": "HYBRD",
   "sellerFeeBasisPoints": 500,
   "isMutable": true,
+  "retainAuthority": true,
+  "gatekeeper": null,
+  "goLiveDate": null,
+  "endSettings": null,
+  "whitelistMintSettings": null,
+  "hiddenSettings": null,
+  "uploadMethod": "bundlr",
+  "awsS3Bucket": null,
+  "noRetainAuthority": false,
+  "noMutable": false,
+  "shuffle": true,
   "creators": [
     {
-      "address": "YOUR_WALLET_ADDRESS_HERE",
+      "address": "HTZKRgPveaNk4EH7XXuq243rUv2DTAFbZkcadjWkhc7",
       "share": 100
     }
   ],
-  "uploadMethod": "bundlr",
-  "retainAuthority": true,
-  "awsS3Bucket": null,
-  "shuffle": true
+  "collection": {
+    "name": "HybridVibes",
+    "family": "HybridVibes"
+  }
 }
