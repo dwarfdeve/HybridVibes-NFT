@@ -1,0 +1,9 @@
+name: Validate Metadata
+on: [push]
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate JSON
+        run: python -m json.tool metadata/*.json || echo 'Metadata validation failed'

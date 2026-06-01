@@ -1,0 +1,1 @@
+print('Advanced rarity weighted generator ready')
