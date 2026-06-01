@@ -1,0 +1,17 @@
+{
+  "price": 1.5,
+  "number": 1000,
+  "symbol": "HYBRD",
+  "sellerFeeBasisPoints": 500,
+  "isMutable": true,
+  "creators": [
+    {
+      "address": "YOUR_WALLET_ADDRESS_HERE",
+      "share": 100
+    }
+  ],
+  "uploadMethod": "bundlr",
+  "retainAuthority": true,
+  "awsS3Bucket": null,
+  "shuffle": true
+}
