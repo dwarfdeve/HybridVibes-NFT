@@ -1,17 +1,12 @@
-# HybridVibes NFT
+# HybridVibes NFT Collection
 
-Premium cinematic 3D hybrid NFT collection blending **Bored Ape Yacht Club**, **Doodles**, **Lost Dogs**, and **Pudgy Penguins**.
+10,000 premium 3D hybrid NFTs blending BAYC + Doodles + Lost Dogs + Pudgy Penguins.
 
-## Features
-- High-quality 3D rendered characters
-- Weighted rarity system
-- Full Metaplex Core + Candy Machine V3 ready
-- Next.js minting website included
+**Mint Price:** 2 SOL
+**Treasury:** HTZKRgPveaNk4EH7XXuq243rUv2DTAFbZkcadjWkhc7
 
-## Quick Start
-1. Clone the repo
-2. Generate images using prompts/
-3. Upload assets to Arweave
-4. Deploy Candy Machine with Sugar CLI
+## Folders
+- /images/ - NFT images (square 1:1)
+- /metadata/ - JSON metadata files
 
-See `DEPLOYMENT.md` for full guide.
+Ready for Solana Candy Machine V3.
