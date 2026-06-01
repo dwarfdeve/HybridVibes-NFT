@@ -1,2 +1,3 @@
-# HybridVibes-NFT
-Premium 3D Hybrid NFT Collection - BAYC + Doodles + Lost Dogs + Pudgy Penguins
+# HybridVibes NFT
+
+3D Hybrid Collection: BAYC + Doodles + Lost Dogs + Pudgy Penguins
