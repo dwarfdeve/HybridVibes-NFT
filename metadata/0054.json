@@ -1,0 +1,22 @@
+{
+  "name": "HybridVibes #0054",
+  "symbol": "HYBRD",
+  "description": "Premium cinematic 3D hybrid blending BAYC, Doodles, Lost Dogs & Pudgy Penguins",
+  "image": "https://arweave.net/YOUR_LINK/0054.png",
+  "attributes": [
+    {"trait_type": "Base Hybrid", "value": "Ape"},
+    {"trait_type": "Fur/Texture", "value": "Dark Obsidian"},
+    {"trait_type": "Eyes", "value": "Galaxy Cosmos"},
+    {"trait_type": "Expression", "value": "Grumpy"},
+    {"trait_type": "Headwear", "value": "None"},
+    {"trait_type": "Clothing", "value": "Black Feather Jacket"},
+    {"trait_type": "Accessories", "value": "Diamond Square Pendant"},
+    {"trait_type": "Background", "value": "Luxury Yacht Deck"}
+  ],
+  "properties": {
+    "files": [{"uri": "https://arweave.net/YOUR_LINK/0054.png", "type": "image/png"}],
+    "category": "image",
+    "creators": [{"address": "HTZKRgPveaNk4EH7XXuq243rUv2DTAFbZkcadjWkhc7", "share": 100}]
+  },
+  "seller_fee_basis_points": 500
+}
