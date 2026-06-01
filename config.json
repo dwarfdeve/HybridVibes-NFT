@@ -1,28 +1,13 @@
 {
   "price": 2,
   "number": 10000,
-  "symbol": "HYBRD",
+  "solTreasuryAccount": "HTZKRgPveaNk4EH7XXuq243rUv2DTAFbZkcadjWkhc7",
   "sellerFeeBasisPoints": 500,
-  "isMutable": true,
-  "retainAuthority": true,
-  "gatekeeper": null,
-  "goLiveDate": null,
-  "endSettings": null,
-  "whitelistMintSettings": null,
-  "hiddenSettings": null,
-  "uploadMethod": "bundlr",
-  "awsS3Bucket": null,
-  "noRetainAuthority": false,
-  "noMutable": false,
-  "shuffle": true,
+  "symbol": "HYBRD",
   "creators": [
     {
       "address": "HTZKRgPveaNk4EH7XXuq243rUv2DTAFbZkcadjWkhc7",
       "share": 100
     }
-  ],
-  "collection": {
-    "name": "HybridVibes",
-    "family": "HybridVibes"
-  }
+  ]
 }
