@@ -4,6 +4,22 @@
 
 ---
 
+## 🌐 Minting Website
+
+The live minting site is built with **React + Vite + Solana Wallet Adapter**.
+
+**Features:**
+- 🔌 **Connect Wallet** — Phantom & Solflare supported (nav bar)
+- 💎 **Live SOL Balance** — shown next to connected wallet address
+- 🚀 **Execute Mint** — sends a real on-chain transaction (2 SOL to treasury)
+- 📊 **Progress Bar** — minted count + % live
+- 🔗 **Solscan Link** — every confirmed mint links to the tx on-chain
+- 🎨 **26 Real NFT Images** — full gallery with scrolling ticker strip
+
+**After Candy Machine deployment:** paste your CM address into `artifacts/hybrid-vibes/src/lib/solana-config.ts` → `CANDY_MACHINE_ID` to activate the real `mintV2` instruction.
+
+---
+
 ## Collection Overview
 
 | Detail | Value |
@@ -27,9 +43,32 @@ HybridVibes-NFT/
 ├── config.json                ← Sugar CLI / iMintify config
 ├── prompts/
 │   └── master-prompt.txt      ← Full AI generation style prompt
-├── images/                    ← NFT images (0001.png → 10000.png)
-└── metadata/                  ← Matching JSON files (0001.json → 10000.json)
+├── images/                    ← 26 NFT images (0046.png → 0071.png)
+└── metadata/                  ← Matching JSON files (0046.json → 0071.json)
 ```
+
+---
+
+## Current Specimens (26 generated)
+
+| ID | Name | Background |
+|---|---|---|
+| #0046–0056 | iPhone Collection | Studio / street |
+| #0057 | Crystal Penguin | Celestial tiara |
+| #0058 | Temple Dog | Ancient jade temple |
+| #0059 | Island Hybrid | Tropical volcanic |
+| #0060 | Reef Bear | Deep sea coral |
+| #0061 | Tokyo Ape | Neon Tokyo skyline |
+| **#0062** | **Kyoto Oni Ape** | **Vermillion torii · Cherry blossom night** |
+| #0063 | Alien Ocean Dog | Twin moons · Bioluminescent waves |
+| #0064 | Cosmos Penguin | Nebula Pillars of Creation |
+| #0065 | HK Night Bear | Cyberpunk Hong Kong night market |
+| #0066 | Mirror Samurai | Shattered mirror dimension |
+| #0067 | Venice Carnival | Grand Canal Carnevale night |
+| #0068 | Deep Sea Penguin | Midnight Zone 3000m depth |
+| #0069 | Arctic Aurora Ape | Crystal ice palace + aurora borealis |
+| #0070 | Volcano Bear | Supervolcano eruption caldera |
+| #0071 | Matrix Hacker | Living digital server cathedral |
 
 ---
 
@@ -46,34 +85,11 @@ Each HybridVibes NFT has **8 trait categories**:
 | **Headwear** | Hat, crown, visor, goggles, or none |
 | **Clothing** | Top, jacket, or shirt |
 | **Accessories** | Chains, pendants, skateboards… |
-| **Background** | Scene/environment |
+| **Background** | Scene/environment (each one unique) |
 
 ---
 
-## Metadata Format
-
-```json
-{
-  "name": "HybridVibes #0001",
-  "symbol": "HYBRD",
-  "description": "Premium cinematic 3D hybrid blending BAYC, Doodles, Lost Dogs & Pudgy Penguins",
-  "image": "https://arweave.net/YOUR_LINK/0001.png",
-  "attributes": [
-    {"trait_type": "Base Hybrid", "value": "Ape"},
-    {"trait_type": "Fur/Texture", "value": "Golden Honey"},
-    {"trait_type": "Eyes", "value": "Bored Brown"},
-    {"trait_type": "Expression", "value": "Bored"},
-    {"trait_type": "Headwear", "value": "Gray Knit Beanie"},
-    {"trait_type": "Clothing", "value": "Dark Hoodie"},
-    {"trait_type": "Accessories", "value": "Gold Chain"},
-    {"trait_type": "Background", "value": "Dark Studio God Rays"}
-  ]
-}
-```
-
----
-
-## Mint Instructions (iMintify)
+## Mint Instructions (iMintify — Easiest)
 
 1. Go to [iMintify.com](https://imintify.com) and connect your Phantom wallet
 2. Click **"Create Collection"** → **"Upload Assets"**
@@ -81,6 +97,7 @@ Each HybridVibes NFT has **8 trait categories**:
 4. Set mint price to **2 SOL**, royalties to **5%**, supply to **10,000**
 5. Set treasury to `HTZKRgPveaNk4EH7XXuq243rUv2DTAFbZkcadjWkhc7`
 6. Click **"Deploy Candy Machine"** and sign the transaction
+7. Copy the **Candy Machine ID** and paste it into `solana-config.ts`
 
 ---
 
@@ -91,7 +108,7 @@ Each HybridVibes NFT has **8 trait categories**:
 # Install Sugar CLI
 bash <(curl -sSf https://sugar.metaplex.com/install.sh)
 
-# Install Solana CLI (if not installed)
+# Install Solana CLI
 sh -c "$(curl -sSfL https://release.solana.com/stable/install)"
 ```
 
@@ -115,37 +132,22 @@ sugar upload
 # 5. Deploy Candy Machine
 sugar deploy
 
-# 6. Verify everything looks correct
+# 6. Verify
 sugar verify
 
-# 7. Launch the mint
+# 7. Launch
 sugar launch
+
+# 8. Paste the Candy Machine ID into the website config:
+#    artifacts/hybrid-vibes/src/lib/solana-config.ts → CANDY_MACHINE_ID
 ```
 
-> **Note:** After `sugar upload`, update the `image` URLs in all metadata JSONs from `https://arweave.net/YOUR_LINK/XXXX.png` to the actual Arweave links provided in the upload output.
-
----
-
-## How to Upload Your iPhone Images (Least Clicks)
-
-### Method 1: GitHub Web UI (Recommended for iPhone)
-1. Open this repo on Safari: `github.com/dwarfdeve/HybridVibes-NFT`
-2. Tap **`images/`** folder
-3. Tap **`Add file`** → **`Upload files`**
-4. Tap **`Choose files`** → select all your images from Photos at once (long-press to multi-select)
-5. Scroll down → tap **`Commit changes`**
-6. Repeat for **`metadata/`** folder with the JSON files
-
-### Method 2: GitHub Desktop (Mac/PC, fastest overall)
-1. Clone the repo in GitHub Desktop
-2. Drag all PNG files into the `images/` folder
-3. Drag all JSON files into the `metadata/` folder
-4. Click **Commit to main** → **Push origin**
+> **After `sugar upload`:** Replace `"https://arweave.net/YOUR_LINK/XXXX.png"` in all metadata JSONs with the real Arweave URLs from the upload output.
 
 ---
 
 ## License
 
-All HybridVibes artwork is protected. Holders receive a commercial license to their specific NFT.
+All HybridVibes artwork is protected. Holders receive a full commercial license to their specific minted NFT.
 
-Treasury Wallet: `HTZKRgPveaNk4EH7XXuq243rUv2DTAFbZkcadjWkhc7`
+Treasury: `HTZKRgPveaNk4EH7XXuq243rUv2DTAFbZkcadjWkhc7`
